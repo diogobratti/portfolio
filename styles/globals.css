@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;600;700&display=swap');
+@import "css2.css";
 
 body {
   padding: 0;
@@ -30,13 +30,38 @@ h1, h2, h3, h4, h5, h6, p {
 .green {
   color: #4dba87;
 }
-.flex {
+.flex-row {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+}
+.flex-column-space-between {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  align-content: space-between;
+}
+.flex-space-evenly {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
 .flex-full {
   flex: 1;
+}
+.contact-field {
+  justify-content: center;
+}
+.contact-field input, p, textarea {
+  margin-left: 2rem;
 }
 .justify-space {
   justify-content: space-between;
@@ -102,6 +127,8 @@ nav ul li {
   padding: 2rem;
   margin-top: 0.5em;
   border-radius: 0.5rem;
+  cursor: pointer;
+  
 }
 .about-card h3 {
   font-size: 1.5rem;

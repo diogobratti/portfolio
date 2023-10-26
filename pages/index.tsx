@@ -3,34 +3,43 @@ import Head from "next/head";
 import About from "../components/About";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Skill from "../components/Skill";
+import Portfolio from "../components/Portfolio";
+import Resume from "../components/Resume";
+import Contact from "../components/Contact";
 
 const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Blaiti - Frontend Developer</title>
+        <title>Bratti - Fullstack and Mobile Developer</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="author" content="Skander Blaiti" />
-        <meta name="keywords" content="ReactJS, NextJS" />
-        <meta name="description" content="I am a talented Front-End developer with a UI/UX design background." />
+        <meta name="author" content="Diogo Bratti" />
+        <meta name="keywords" content="Mobile, Fullstack, Backend, Frontend, ReactJS, ReactNative, Flutter, PHP, MySQL, Oracle" />
+        <meta name="description" content="I am a proactive, talented and responsible JavaScript and PHP developer focused on mobile and full stack position." />
         <meta charSet="UTF-8" />
         <meta name="theme-color" content="#2D2E32" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <meta property="og:site_name" content="Blaiti - Frontend Developer" />
-        <meta property="og:locale" content="en_GB" />
-        <title data-rh="true">Blaiti - Frontend Developer</title>
-        <meta data-rh="true" property="og:type" content="website"/>
-        <meta data-rh="true" property="og:title" content="Blaiti - Frontend Developer"/>
-        <meta data-rh="true" property="og:image" content="/images/blaiti.png"/>
+        <meta property="og:site_name" content="Bratti - Fullstack and Mobile Developer" />
+        <meta property="og:locale" content="en_US" />
+        <title data-rh="true">Bratti - Fullstack and Mobile Developer</title>
+        <meta data-rh="true" property="og:type" content="website" />
+        <meta data-rh="true" property="og:title" content="Bratti - Fullstack and Mobile Developer" />
+        <meta data-rh="true" property="og:image" content="/images/diogo_1.png" />
       </Head>
 
       {/* Header */}
       <Header />
 
-      <main>
-        {/* About */}
-        <About />
+      <main className="dark-bg">
+        <div className="flex-column">
+          <About />
+          <Skill />
+          <Portfolio />
+          <Resume />
+          <Contact />
+        </div>
       </main>
 
       {/* Footer */}

@@ -7,15 +7,16 @@ export default function Header() {
     return (
         <header>
             <NavBar />
-            <div className="header flex light-bg">
+            <div className="header flex-row light-bg">
                 <div>
-                    <button>Front-End Developer</button>
-                    <h1 className="white">Talk is cheap.</h1>
-                    <h1 className="white">Show me the code!</h1>
-                    <p className="gray">I design and code beautiful simple things, and I love what I do.</p>
-                    <a className="green" href="mailto:contact@blaiti.com">Let&#39;s chat!</a>
+                    <button>Fullstack and Mobile Developer</button>
+                    <h1 className="white">A man of focus, </h1>
+                    <h1 className="white">commitment and</h1>
+                    <h1 className="white">sheer will.</h1>
+                    <p className="gray">My objective is add value to your business.</p>
+                    <a className="green" href="mailto:dbratti@gmail.com">Let&#39;s chat!</a>
                 </div>
-                <Image src="/images/blaiti.png" width={463} height={513} alt="blaiti"  /> 
+                <Image src="/images/diogo_1.png" width={361} height={642} alt="bratti"  /> 
             </div>
         </header>
     )
