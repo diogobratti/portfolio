@@ -57,8 +57,11 @@ h1, h2, h3, h4, h5, h6, p {
 .flex-full {
   flex: 1;
 }
-.contact-field {
+.justify-center {
   justify-content: center;
+}
+.align-center {
+  align-content: center;
 }
 .contact-field input, p, textarea {
   margin-left: 2rem;
@@ -78,6 +81,13 @@ button {
   font-weight: 600;
   background-color: #4dba87;
   cursor: pointer;
+}
+.skill-image {
+  border-radius: 10px;
+}
+.portfolio-image {
+  border-radius: 10px;
+  background-color: #FFFFFF;
 }
 
 /* Header */
@@ -127,8 +137,9 @@ nav ul li {
   padding: 2rem;
   margin-top: 0.5em;
   border-radius: 0.5rem;
-  cursor: pointer;
-  
+}
+.pointer {
+  cursor: pointer; 
 }
 .about-card h3 {
   font-size: 1.5rem;

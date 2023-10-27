@@ -5,6 +5,7 @@ export default function Contact() {
     const [email, setEmail] = useState("");
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
+    const inputSize = 50;
 
     //   Form validation
     const [errors, setErrors] = useState({ fullname: false, email: false, subject: false, message: false });
@@ -60,7 +61,7 @@ export default function Contact() {
         // console.log(fullname, email, subject, message);
     };
     return (
-        <div className="dark-bg flex-column">
+        <div className="dark-bg flex-column about-text">
             <form
                 onSubmit={handleSubmit}
                 className=""
@@ -71,7 +72,7 @@ export default function Contact() {
                     Send a message
                 </h3>
 
-                <div className="flex-row contact-field">
+                <div className="flex-row contact-field justify-center">
                     <label
                         htmlFor="fullname"
                         className="white"
@@ -81,6 +82,7 @@ export default function Contact() {
                     <input
                         type="text"
                         value={fullname}
+                        size={inputSize}
                         onChange={(e) => {
                             setFullname(e.target.value);
                         }}
@@ -91,7 +93,7 @@ export default function Contact() {
                         <p className="gray">Fullname cannot be empty.</p>
                     )}
                 </div>
-                <div className="flex-row contact-field">
+                <div className="flex-row contact-field justify-center">
                     <label
                         htmlFor="email"
                         className="white"
@@ -102,6 +104,7 @@ export default function Contact() {
                         type="email"
                         name="email"
                         value={email}
+                        size={inputSize}
                         onChange={(e) => {
                             setEmail(e.target.value);
                         }}
@@ -111,7 +114,7 @@ export default function Contact() {
                         <p className="gray">Email cannot be empty.</p>
                     )}
                 </div>
-                <div className="flex-row contact-field">
+                <div className="flex-row contact-field justify-center">
 
                     <label
                         htmlFor="subject"
@@ -123,6 +126,7 @@ export default function Contact() {
                         type="text"
                         name="subject"
                         value={subject}
+                        size={inputSize}
                         onChange={(e) => {
                             setSubject(e.target.value);
                         }}
@@ -132,7 +136,7 @@ export default function Contact() {
                         <p className="gray">Subject cannot be empty.</p>
                     )}
                 </div>
-                <div className="flex-row contact-field">
+                <div className="flex-row contact-field justify-center">
                     <label
                         htmlFor="message"
                         className="white"
@@ -142,6 +146,8 @@ export default function Contact() {
                     <textarea
                         name="message"
                         value={message}
+                        cols={inputSize+7}
+                        rows={10}
                         onChange={(e) => {
                             setMessage(e.target.value);
                         }}

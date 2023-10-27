@@ -12,7 +12,7 @@ export default function About() {
                     <AboutCard
                         title="Skills"
                         icon="/icons/code.svg"
-                        description="Check out my technical skills."
+                        description="Check out SOME of my technical skills."
                         link="skill"
                         projects={0} />
                     <AboutCard
@@ -23,7 +23,7 @@ export default function About() {
                         projects={3} />
                     <AboutCard
                         title="Resum&#233;"
-                        icon="/icons/phone.svg"
+                        icon="/icons/document.svg"
                         description="Here you can access my curriculum vitae."
                         link="resume"
                         projects={0} />
@@ -56,7 +56,7 @@ type Props = {
 function AboutCard({ title, icon, description, link, projects }: Props) {
     return (
         <Link href={"/#" + link}>
-            <div className="light-bg about-card">
+            <div className="light-bg about-card pointer">
                 <div className="flex-row justify-space">
                     <h3 className="green">{title}</h3>
                     <Image src={icon} width={28} height={28} alt={title} />
