@@ -89,6 +89,9 @@ button {
   border-radius: 10px;
   background-color: #FFFFFF;
 }
+.underline {
+  text-decoration: underline;
+}
 
 /* Header */
 nav {
@@ -130,16 +133,39 @@ nav ul li {
   text-decoration: underline;
   cursor: pointer;
 }
+.pointer {
+  cursor: pointer; 
+}
 
+/* Portfolio */
+.portfolio-card {
+  padding: 1rem;
+  margin-top: 0.5em;
+  border-radius: 0.5rem;
+}
+.portfolio-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.portfolio-card p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.portfolio-card span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
 /* About */
 .about-card {
   width: 90%;
   padding: 2rem;
   margin-top: 0.5em;
   border-radius: 0.5rem;
-}
-.pointer {
-  cursor: pointer; 
 }
 .about-card h3 {
   font-size: 1.5rem;
