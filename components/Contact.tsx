@@ -71,6 +71,12 @@ export default function Contact() {
                 <h3 className="green flex3">
                     Send a message
                 </h3>
+                <p className="white flex3">
+                    E-mail: <a href="mailto:dbratti@gmail.com">dbratti@gmail.com</a>
+                </p>
+                <p className="white flex3">
+                    Phone: <a href="tel:+5548999518667">+55 48 99951 8667</a>
+                </p>
 
                 <div className="flex-row contact-field justify-center">
                     <label
@@ -146,7 +152,7 @@ export default function Contact() {
                     <textarea
                         name="message"
                         value={message}
-                        cols={inputSize+7}
+                        cols={inputSize + 7}
                         rows={10}
                         onChange={(e) => {
                             setMessage(e.target.value);

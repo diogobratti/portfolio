@@ -35,9 +35,9 @@ function PortfolioCard({ title, icon, description, technology, website, github, 
             <Image src={icon} width={50} height={50} alt={title} className="portfolio-image" />
             <h3 className="white">{title}</h3>
             <p className="white">{description}</p>
-            {(docAndCodeCanBeShown ?
+            {/* {(docAndCodeCanBeShown ?
                 <p className="gray pointer">Access diagrams e project details <span>here</span>.</p> :
-                <p className="gray">Contractor have not authorized to show the project documentation and code.</p>)}
+                <p className="gray">Contractor have not authorized to show the project documentation and code.</p>)} */}
             <p className="gray">Technologies used: {technology}</p>
             <div className="flex-row justify-space pointer">
                 {(website != "" ? <a href={website} target="_blank" rel="noreferrer"><Image src="/icons/website-click.svg" width={24} height={24} alt="website" /></a> : <></>)}
