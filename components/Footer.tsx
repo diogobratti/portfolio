@@ -6,8 +6,8 @@ export default function Footer() {
     const year = new Date().getFullYear();
 
     return (
-        <footer className="light-bg flex-row justify-space">
-            <span className="white">Copyright © {year} <Link href="/">Bratti</Link> - All rights reserved.</span>
+        <footer className="bg-zinc-800 flex-row justify-space">
+            <span className="text-white">Copyright © {year} <Link href="/">Bratti</Link> - All rights reserved.</span>
             <ul className="flex flex-row">
                 <li>
                     <a href="https://www.instagram.com/dbratti" target="_blank" rel="noreferrer">

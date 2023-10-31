@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function About() {
     return (
-        <section id="about" className="dark-bg">
+        <section id="about">
             <div className="flex-row">
                 <div className="flex-full">
                     <AboutCard
@@ -56,13 +56,13 @@ type Props = {
 function AboutCard({ title, icon, description, link, projects }: Props) {
     return (
         <Link href={"/#" + link}>
-            <div className="light-bg about-card pointer">
+            <div className="bg-zinc-800 about-card pointer">
                 <div className="flex-row justify-space">
-                    <h3 className="green">{title}</h3>
+                    <h3 className="text-green-400">{title}</h3>
                     <Image src={icon} width={28} height={28} alt={title} />
                 </div>
-                <p className="white">{description}</p>
-                {(projects > 0 ? <span className="gray">{projects.toString()} projects</span> : <></>)}
+                <p className="text-white">{description}</p>
+                {(projects > 0 ? <span className="text-neutral-500">{projects.toString()} projects</span> : <></>)}
             </div>
         </Link>
     )

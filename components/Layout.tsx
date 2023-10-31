@@ -1,13 +1,6 @@
-import type { NextPage } from "next";
 import Head from "next/head";
-import About from "../components/About";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import Skill from "../components/Skill";
-import Portfolio from "../components/Portfolio";
-import Resume from "../components/Resume";
-import Contact from "../components/Contact";
-import Image from "next/image";
 import { ReactNode } from 'react';
 
 type LayoutProps = {children?: ReactNode}
@@ -35,7 +28,7 @@ export default function Layout({ children } : LayoutProps) {
             {/* Header */}
 
             <Header />
-            <main className="dark-bg">
+            <main className="bg-zinc-900">
                 {children}
             </main>
 

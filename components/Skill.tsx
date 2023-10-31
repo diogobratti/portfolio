@@ -4,8 +4,8 @@ import Image from "next/image";
 export default function Skill() {
 
     return (
-        <section id="skill" className="dark-bg about-text flex-column">
-            <h3 className="green">Skills</h3>
+        <section id="skill" className="about-text flex-column">
+            <h3 className="text-green-400">Skills</h3>
             <div className="flex-row">
                 <SkillCard title="NodeJS" icon="/icons/nodejs.png" width={200} />
                 <SkillCard title="React" icon="/icons/react.png" width={100} />
@@ -21,8 +21,8 @@ export default function Skill() {
                 <SkillCard title="React Native" icon="/icons/react-native.png" width={86} />
                 <SkillCard title="Flutter" icon="/icons/flutter.jpeg" width={212} />
             </div>
-            <h3 className="green">Differentials</h3>
-            <ul className="white">
+            <h3 className="text-green-400">Differentials</h3>
+            <ul className="text-white">
                 <li>Senior level engineer with formal education.</li>
                 <li>I have worked as support, engineer and manager, I do have a complete vision of the process.</li>
                 <li>Agile methodology.</li>
@@ -40,7 +40,7 @@ type Props = {
 
 function SkillCard({ title, icon, width }: Props) {
     return (
-        <div className="dark-bg about-card flex-column justify-center align-center">
+        <div className="about-card flex-column justify-center align-center">
             <div className="flex-row justify-space">
                 <Image src={icon} width={width} height={100} alt={title} className="skill-image" />
             </div>

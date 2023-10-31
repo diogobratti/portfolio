@@ -61,29 +61,29 @@ export default function Contact() {
         // console.log(fullname, email, subject, message);
     };
     return (
-        <div className="dark-bg flex-column about-text">
+        <div className="flex-column about-text">
             <form
                 onSubmit={handleSubmit}
                 className=""
                 action="https://public.herotofu.com/v1/d8155a60-7439-11ee-8bcd-4fcc9e7e7286"
                 method="POST"
             >
-                <h3 className="green flex3">
+                <h3 className="text-green-400 flex3">
                     Send a message
                 </h3>
-                <p className="white flex3">
+                <p className="text-white flex3">
                     E-mail: <a href="mailto:dbratti@gmail.com">dbratti@gmail.com</a>
                 </p>
-                <p className="white flex3">
+                <p className="text-white flex3">
                     Phone: <a href="tel:+5548999518667">+55 48 99951 8667</a>
                 </p>
 
                 <div className="flex-row contact-field justify-center">
                     <label
                         htmlFor="fullname"
-                        className="white"
+                        className="text-white"
                     >
-                        Full name<span className="gray">*</span>
+                        Full name<span className="text-neutral-500">*</span>
                     </label>
                     <input
                         type="text"
@@ -96,15 +96,15 @@ export default function Contact() {
                         className=""
                     />
                     {errors?.fullname && (
-                        <p className="gray">Fullname cannot be empty.</p>
+                        <p className="text-neutral-500">Fullname cannot be empty.</p>
                     )}
                 </div>
                 <div className="flex-row contact-field justify-center">
                     <label
                         htmlFor="email"
-                        className="white"
+                        className="text-white"
                     >
-                        E-mail<span className="gray">*</span>
+                        E-mail<span className="text-neutral-500">*</span>
                     </label>
                     <input
                         type="email"
@@ -117,16 +117,16 @@ export default function Contact() {
                         className=""
                     />
                     {errors?.email && (
-                        <p className="gray">Email cannot be empty.</p>
+                        <p className="text-neutral-500">Email cannot be empty.</p>
                     )}
                 </div>
                 <div className="flex-row contact-field justify-center">
 
                     <label
                         htmlFor="subject"
-                        className="white"
+                        className="text-white"
                     >
-                        Subject<span className="gray">*</span>
+                        Subject<span className="text-neutral-500">*</span>
                     </label>
                     <input
                         type="text"
@@ -139,15 +139,15 @@ export default function Contact() {
                         className=""
                     />
                     {errors?.subject && (
-                        <p className="gray">Subject cannot be empty.</p>
+                        <p className="text-neutral-500">Subject cannot be empty.</p>
                     )}
                 </div>
                 <div className="flex-row contact-field justify-center">
                     <label
                         htmlFor="message"
-                        className="white"
+                        className="text-white"
                     >
-                        Message<span className="gray">*</span>
+                        Message<span className="text-neutral-500">*</span>
                     </label>
                     <textarea
                         name="message"
@@ -160,7 +160,7 @@ export default function Contact() {
                         className=""
                     ></textarea>
                     {errors?.message && (
-                        <p className="gray">Message body cannot be empty.</p>
+                        <p className="text-neutral-500">Message body cannot be empty.</p>
                     )}
                 </div>
                 <div className="flex flex-row justify-start">
@@ -186,12 +186,12 @@ export default function Contact() {
                 </div>
                 <div className="text-left">
                     {showSuccessMessage && (
-                        <p className="green">
+                        <p className="text-green-400">
                             Thank you! Your Message has been delivered.
                         </p>
                     )}
                     {showFailureMessage && (
-                        <p className="green">
+                        <p className="text-green-400">
                             Oops! Something went wrong, please try again.
                         </p>
                     )}
