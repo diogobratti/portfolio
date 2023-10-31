@@ -61,24 +61,24 @@ export default function Contact() {
         // console.log(fullname, email, subject, message);
     };
     return (
-        <div className="flex-column about-text">
+        <div className="flex flex-col grow items-center">
             <form
                 onSubmit={handleSubmit}
                 className=""
                 action="https://public.herotofu.com/v1/d8155a60-7439-11ee-8bcd-4fcc9e7e7286"
                 method="POST"
             >
-                <h3 className="text-green-400 flex3">
+                <h3 className="text-green-400 mb-4 font-medium text-2xl italic text-justify">
                     Send a message
                 </h3>
-                <p className="text-white flex3">
-                    E-mail: <a href="mailto:dbratti@gmail.com">dbratti@gmail.com</a>
+                <p className="text-white font-medium text-base text-justify">
+                    E-mail: <a href="mailto:dbratti@gmail.com" className="no-underline decoration-inherit">dbratti@gmail.com</a>
                 </p>
-                <p className="text-white flex3">
-                    Phone: <a href="tel:+5548999518667">+55 48 99951 8667</a>
+                <p className="text-white font-medium text-base text-justify">
+                    Phone: <a href="tel:+5548999518667" className="no-underline decoration-inherit">+55 48 99951 8667</a>
                 </p>
 
-                <div className="flex-row contact-field justify-center">
+                <div className="flex flex-row items-center justify-center">
                     <label
                         htmlFor="fullname"
                         className="text-white"
@@ -93,13 +93,13 @@ export default function Contact() {
                             setFullname(e.target.value);
                         }}
                         name="fullname"
-                        className=""
+                        className="ml-8"
                     />
                     {errors?.fullname && (
-                        <p className="text-neutral-500">Fullname cannot be empty.</p>
+                        <p className="text-neutral-500 ml-8">Fullname cannot be empty.</p>
                     )}
                 </div>
-                <div className="flex-row contact-field justify-center">
+                <div className="flex flex-row items-center justify-center">
                     <label
                         htmlFor="email"
                         className="text-white"
@@ -114,13 +114,13 @@ export default function Contact() {
                         onChange={(e) => {
                             setEmail(e.target.value);
                         }}
-                        className=""
+                        className="ml-8"
                     />
                     {errors?.email && (
-                        <p className="text-neutral-500">Email cannot be empty.</p>
+                        <p className="text-neutral-500 ml-8">Email cannot be empty.</p>
                     )}
                 </div>
-                <div className="flex-row contact-field justify-center">
+                <div className="flex flex-row items-center justify-center">
 
                     <label
                         htmlFor="subject"
@@ -136,13 +136,13 @@ export default function Contact() {
                         onChange={(e) => {
                             setSubject(e.target.value);
                         }}
-                        className=""
+                        className="ml-8"
                     />
                     {errors?.subject && (
-                        <p className="text-neutral-500">Subject cannot be empty.</p>
+                        <p className="text-neutral-500 ml-8">Subject cannot be empty.</p>
                     )}
                 </div>
-                <div className="flex-row contact-field justify-center">
+                <div className="flex flex-row items-center justify-center">
                     <label
                         htmlFor="message"
                         className="text-white"
@@ -157,16 +157,16 @@ export default function Contact() {
                         onChange={(e) => {
                             setMessage(e.target.value);
                         }}
-                        className=""
+                        className="ml-8"
                     ></textarea>
                     {errors?.message && (
-                        <p className="text-neutral-500">Message body cannot be empty.</p>
+                        <p className="text-neutral-500 ml-8 font-medium text-base text-justify">Message body cannot be empty.</p>
                     )}
                 </div>
-                <div className="flex flex-row justify-start">
+                <div className="flex flex-row items-center justify-start">
                     <button
                         type="submit"
-                        className="flex flex-row"
+                        className="flex flex-row border-0 rounded-sm py-2 px-4 bg-green-400 text-zinc-800 cursor-pointer font-semibold text-sm"
                     >
                         {buttonText}
                         <svg
@@ -186,12 +186,12 @@ export default function Contact() {
                 </div>
                 <div className="text-left">
                     {showSuccessMessage && (
-                        <p className="text-green-400">
+                        <p className="text-green-400 font-medium text-base text-justify">
                             Thank you! Your Message has been delivered.
                         </p>
                     )}
                     {showFailureMessage && (
-                        <p className="text-green-400">
+                        <p className="text-green-400 font-medium text-base text-justify">
                             Oops! Something went wrong, please try again.
                         </p>
                     )}

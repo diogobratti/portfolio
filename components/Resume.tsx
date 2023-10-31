@@ -3,7 +3,7 @@ import React from "react";
 export default function Resume() {
 
     return (
-        <section id="resume" className="dark-bg">
+        <section id="resume" className="p-20">
         </section>
     )
 }

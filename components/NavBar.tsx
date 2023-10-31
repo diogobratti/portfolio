@@ -4,12 +4,12 @@ import Link from "next/link";
 export default function NavBar() {
 
     return (
-        <nav className="flex-row bg-zinc-800 justify-space">
-            <div className="logo text-white">
+        <nav className="py-4 px-20 flex flex-row bg-zinc-800 justify-between">
+            <div className="text-white text-2xl font-semibold">
                 <Link href="/">Diogo Bratti</Link>
             </div>
 
-            <ul className="flex-row text-white">
+            <ul className="flex flex-row text-white ml-12 text-sm font-semibold list-none">
                 <li className="text-green-400">
                     <Link href="/">Home</Link>
                 </li>

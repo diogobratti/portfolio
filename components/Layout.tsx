@@ -28,7 +28,7 @@ export default function Layout({ children } : LayoutProps) {
             {/* Header */}
 
             <Header />
-            <main className="bg-zinc-900">
+            <main className="bg-zinc-900 box-border p-0 m-0 font-sans">
                 {children}
             </main>
 
