@@ -9,22 +9,23 @@ import Image from "next/image";
 const Home: NextPage = () => {
   return (
     <>
-      <div className="justify-between px-20 pt-4 pb-0 flex flex-row bg-zinc-800">
+      <div className="justify-between px-8 md:px-20 pt-4 pb-0 flex flex-col md:flex-row bg-zinc-800">
         <div>
-          <button className="border-0 rounded-sm py-2 px-4 bg-green-400 text-zinc-800 cursor-pointer font-semibold text-sm">Fullstack and Mobile Developer</button>
-          <h1 className="text-white text-5xl font-medium">A man of focus, </h1>
+          <button className="border-0 rounded-sm py-2 px-4 bg-green-500 text-zinc-800 cursor-pointer font-semibold text-sm">Fullstack and Mobile Developer</button>
+          <h1 className="text-white mt-12 text-5xl font-medium">A man of focus, </h1>
           <h1 className="text-white text-5xl font-medium">commitment and</h1>
           <h1 className="text-white text-5xl font-medium">sheer will.</h1>
-          <p className="text-neutral-500 text-sm font-medium mt-4 mb-8">My objective is add value to your business.</p>
-          <a className="text-green-400 no-underline decoration-inherit" href="mailto:dbratti@gmail.com">Let&#39;s chat!</a>
+          <p className="text-neutral-500 text-sm font-medium mt-8 mb-8">My objective is add value to your business.</p>
+          <a className="text-green-500 underline uppercase decoration-inherit font-bold" href="mailto:dbratti@gmail.com">Let&#39;s chat!</a>
         </div>
-        <Image src="/images/diogo_1.png" width={361} height={642} alt="bratti" />
+        <div className="mt-8">
+          <Image src="/images/diogo_1.png" width={361} height={642} alt="bratti" />
+        </div>
       </div>
       <div className="flex flex-col grow items-center">
         <About />
         <Skill />
         <Portfolio />
-        <Resume />
         <Contact />
       </div>
     </>

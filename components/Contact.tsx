@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 
 export default function Contact() {
     const [fullname, setFullname] = useState("");
@@ -61,142 +62,132 @@ export default function Contact() {
         // console.log(fullname, email, subject, message);
     };
     return (
-        <div className="flex flex-col grow items-center">
-            <form
-                onSubmit={handleSubmit}
-                className=""
-                action="https://public.herotofu.com/v1/d8155a60-7439-11ee-8bcd-4fcc9e7e7286"
-                method="POST"
-            >
-                <h3 className="text-green-400 mb-4 font-medium text-2xl italic text-justify">
-                    Send a message
-                </h3>
-                <p className="text-white font-medium text-base text-justify">
-                    E-mail: <a href="mailto:dbratti@gmail.com" className="no-underline decoration-inherit">dbratti@gmail.com</a>
-                </p>
-                <p className="text-white font-medium text-base text-justify">
-                    Phone: <a href="tel:+5548999518667" className="no-underline decoration-inherit">+55 48 99951 8667</a>
-                </p>
+        <section id="contact" className="flex flex-col grow items-center px-4 mt-12 mb-8">
+            <div className="flex flex-col grow items-center">
+                    <h3 className="text-green-500 mb-4 font-medium text-2xl italic text-justify">
+                        Send a message
+                    </h3>
+                    <p className="text-white font-medium text-base text-justify">
+                        E-mail: <a href="mailto:dbratti@gmail.com" className="no-underline decoration-inherit">dbratti@gmail.com</a>
+                    </p>
+                    <p className="text-white font-medium text-base text-justify mt-2">
+                        Phone: <a href="tel:+5548999518667" className="no-underline decoration-inherit">+55 48 99951 8667 </a><a href="https://web.whatsapp.com/send?phone=5548999518667"><Image src="/icons/whatsapp.svg" width={24} height={24} alt="whatsapp-icon" /></a>
+                    </p>
+                <form
+                    onSubmit={handleSubmit}
+                    className="mt-4 flex flex-col items-center w-full max-w-xs"
+                    action="https://public.herotofu.com/v1/d8155a60-7439-11ee-8bcd-4fcc9e7e7286"
+                    method="POST"
+                >
 
-                <div className="flex flex-row items-center justify-center">
-                    <label
-                        htmlFor="fullname"
-                        className="text-white"
-                    >
-                        Full name<span className="text-neutral-500">*</span>
-                    </label>
-                    <input
-                        type="text"
-                        value={fullname}
-                        size={inputSize}
-                        onChange={(e) => {
-                            setFullname(e.target.value);
-                        }}
-                        name="fullname"
-                        className="ml-8"
-                    />
-                    {errors?.fullname && (
-                        <p className="text-neutral-500 ml-8">Fullname cannot be empty.</p>
-                    )}
-                </div>
-                <div className="flex flex-row items-center justify-center">
-                    <label
-                        htmlFor="email"
-                        className="text-white"
-                    >
-                        E-mail<span className="text-neutral-500">*</span>
-                    </label>
-                    <input
-                        type="email"
-                        name="email"
-                        value={email}
-                        size={inputSize}
-                        onChange={(e) => {
-                            setEmail(e.target.value);
-                        }}
-                        className="ml-8"
-                    />
-                    {errors?.email && (
-                        <p className="text-neutral-500 ml-8">Email cannot be empty.</p>
-                    )}
-                </div>
-                <div className="flex flex-row items-center justify-center">
-
-                    <label
-                        htmlFor="subject"
-                        className="text-white"
-                    >
-                        Subject<span className="text-neutral-500">*</span>
-                    </label>
-                    <input
-                        type="text"
-                        name="subject"
-                        value={subject}
-                        size={inputSize}
-                        onChange={(e) => {
-                            setSubject(e.target.value);
-                        }}
-                        className="ml-8"
-                    />
-                    {errors?.subject && (
-                        <p className="text-neutral-500 ml-8">Subject cannot be empty.</p>
-                    )}
-                </div>
-                <div className="flex flex-row items-center justify-center">
-                    <label
-                        htmlFor="message"
-                        className="text-white"
-                    >
-                        Message<span className="text-neutral-500">*</span>
-                    </label>
-                    <textarea
-                        name="message"
-                        value={message}
-                        cols={inputSize + 7}
-                        rows={10}
-                        onChange={(e) => {
-                            setMessage(e.target.value);
-                        }}
-                        className="ml-8"
-                    ></textarea>
-                    {errors?.message && (
-                        <p className="text-neutral-500 ml-8 font-medium text-base text-justify">Message body cannot be empty.</p>
-                    )}
-                </div>
-                <div className="flex flex-row items-center justify-start">
-                    <button
-                        type="submit"
-                        className="flex flex-row border-0 rounded-sm py-2 px-4 bg-green-400 text-zinc-800 cursor-pointer font-semibold text-sm"
-                    >
-                        {buttonText}
-                        <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            className="text-cyan-500 ml-2"
-                            fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg"
+                    <div className="flex flex-col md:flex-row items-center justify-center">
+                        <label
+                            htmlFor="fullname"
+                            className="text-white after:content-['*'] after:ml-0.5 after:text-red-500"
                         >
-                            <path
-                                d="M9.00967 5.12761H11.0097C12.1142 5.12761 13.468 5.89682 14.0335 6.8457L16.5089 11H21.0097C21.562 11 22.0097 11.4477 22.0097 12C22.0097 12.5523 21.562 13 21.0097 13H16.4138L13.9383 17.1543C13.3729 18.1032 12.0191 18.8724 10.9145 18.8724H8.91454L12.4138 13H5.42485L3.99036 15.4529H1.99036L4.00967 12L4.00967 11.967L2.00967 8.54712H4.00967L5.44417 11H12.5089L9.00967 5.12761Z"
-                                fill="currentColor"
-                            />
-                        </svg>
-                    </button>
-                </div>
-                <div className="text-left">
-                    {showSuccessMessage && (
-                        <p className="text-green-400 font-medium text-base text-justify">
-                            Thank you! Your Message has been delivered.
-                        </p>
-                    )}
-                    {showFailureMessage && (
-                        <p className="text-green-400 font-medium text-base text-justify">
-                            Oops! Something went wrong, please try again.
-                        </p>
-                    )}
-                </div>
-            </form>
-        </div>
+                            Full name
+                        </label>
+                        <input
+                            type="text"
+                            value={fullname}
+                            size={inputSize}
+                            onChange={(e) => {
+                                setFullname(e.target.value);
+                            }}
+                            name="fullname"
+                            className="md:ml-8 w-11/12"
+                        />
+                        {errors?.fullname && (
+                            <p className="text-neutral-500 md:ml-8">Fullname cannot be empty.</p>
+                        )}
+                    </div>
+                    <div className="flex flex-col md:flex-row items-center justify-center mt-2">
+                        <label
+                            htmlFor="email"
+                            className="text-white after:content-['*'] after:ml-0.5 after:text-red-500"
+                        >
+                            E-mail
+                        </label>
+                        <input
+                            type="email"
+                            name="email"
+                            value={email}
+                            size={inputSize}
+                            onChange={(e) => {
+                                setEmail(e.target.value);
+                            }}
+                            className="md:ml-8 w-11/12"
+                        />
+                        {errors?.email && (
+                            <p className="text-neutral-500 md:ml-8">Email cannot be empty.</p>
+                        )}
+                    </div>
+                    <div className="flex flex-col md:flex-row items-center justify-center mt-2">
+
+                        <label
+                            htmlFor="subject"
+                            className="text-white after:content-['*'] after:ml-0.5 after:text-red-500"
+                        >
+                            Subject
+                        </label>
+                        <input
+                            type="text"
+                            name="subject"
+                            value={subject}
+                            size={inputSize}
+                            onChange={(e) => {
+                                setSubject(e.target.value);
+                            }}
+                            className="md:ml-8 w-11/12"
+                        />
+                        {errors?.subject && (
+                            <p className="text-neutral-500 md:ml-8">Subject cannot be empty.</p>
+                        )}
+                    </div>
+                    <div className="flex flex-col md:flex-row items-center justify-center mt-2">
+                        <label
+                            htmlFor="message"
+                            className="text-white after:content-['*'] after:ml-0.5 after:text-red-500"
+                        >
+                            Message
+                        </label>
+                        <textarea
+                            name="message"
+                            value={message}
+                            cols={inputSize + 7}
+                            rows={10}
+                            onChange={(e) => {
+                                setMessage(e.target.value);
+                            }}
+                            className="md:ml-8 w-11/12"
+                        ></textarea>
+                        {errors?.message && (
+                            <p className="text-neutral-500 md:ml-8 font-medium text-base text-justify">Message body cannot be empty.</p>
+                        )}
+                    </div>
+                    <div className="flex flex-row items-center justify-start mt-4">
+                        <button
+                            type="submit"
+                            className="flex flex-row border-0 rounded-sm py-2 px-4 bg-green-500 text-zinc-800 cursor-pointer font-semibold text-sm"
+                        >
+                            {buttonText}
+                            <Image src="/icons/airplane.svg" width={24} height={24} alt="send-icon" />
+                        </button>
+                    </div>
+                    <div className="text-left">
+                        {showSuccessMessage && (
+                            <p className="text-green-500 font-medium text-base text-justify">
+                                Thank you! Your Message has been delivered.
+                            </p>
+                        )}
+                        {showFailureMessage && (
+                            <p className="text-green-500 font-medium text-base text-justify">
+                                Oops! Something went wrong, please try again.
+                            </p>
+                        )}
+                    </div>
+                </form>
+            </div>
+        </section>
     );
 }
