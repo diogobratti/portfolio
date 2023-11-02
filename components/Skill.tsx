@@ -25,7 +25,7 @@ export default function Skill() {
                 <li>Senior level engineer with formal education.</li>
                 <li>I have worked as support, engineer and manager, I do have a complete vision of the process.</li>
                 <li>Agile methodology.</li>
-                <li>Focused on build value and not only complete the task.</li>
+                <li>Focused to build value and not only complete the task.</li>
             </ul>
         </section>
     )

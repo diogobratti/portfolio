@@ -2,7 +2,6 @@ import type { NextPage } from "next";
 import About from "../components/About";
 import Skill from "../components/Skill";
 import Portfolio from "../components/Portfolio";
-import Resume from "../components/Resume";
 import Contact from "../components/Contact";
 import Image from "next/image";
 

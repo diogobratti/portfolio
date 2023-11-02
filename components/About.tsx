@@ -22,7 +22,7 @@ export default function About() {
                         link="#portfolio"
                         projects={3} />
                     <AboutCard
-                        title="Resum&#233;"
+                        title="R&#233;sum&#233;"
                         icon="/icons/document.svg"
                         description="Here you can access my curriculum vitae."
                         link="documents/CV.pdf"

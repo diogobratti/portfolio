@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Portfolio() {
 
@@ -8,8 +7,8 @@ export default function Portfolio() {
         <section id="portfolio" className="flex flex-col grow items-center px-4 mt-12 md:px-20">
             <h3 className="text-green-500 mb-4 font-medium text-2xl italic text-justify">Portfolio</h3>
             <div className="flex flex-col md:flex-row items-center">
-                <PortfolioCard title="iCare" icon="/icons/icare.png" docAndCodeCanBeShown={true} description='With help of 2 parteners, I have built a react native app (5000+ Downloads) called "iCare" to help elder people find someone to take care of them.' technology="React Native and Firebase" website="" github="https://github.com/diogobratti/iCare-app" playstore="https://play.google.com/store/apps/details?id=br.com.icare.familia&hl=en" />
-                <PortfolioCard title="Motorcom" icon="/icons/motorcom.png" description='This is an audio chat app that does not need Internet connection. It is suppoused to be used when a couple is traveling by motorcycle.' docAndCodeCanBeShown={true} technology="Flutter and WebRTC" website="" github="https://github.com/diogobratti/motorcom" playstore="https://play.google.com/store/apps/details?id=com.dbratti.motorcom" />
+                <PortfolioCard title="iCare" icon="/icons/icare.png" docAndCodeCanBeShown={true} description='With help of 2 partners, I have built a react native app (5000+ Downloads) called "iCare" to help elder people find someone to take care of them.' technology="React Native and Firebase" website="" github="https://github.com/diogobratti/iCare-app" playstore="https://play.google.com/store/apps/details?id=br.com.icare.familia&hl=en" />
+                <PortfolioCard title="Motorcom" icon="/icons/motorcom.png" description='This is an audio chat app that does not need Internet connection. It is supposed to be used when a couple is traveling by motorcycle.' docAndCodeCanBeShown={true} technology="Flutter and WebRTC" website="" github="https://github.com/diogobratti/motorcom" playstore="https://play.google.com/store/apps/details?id=com.dbratti.motorcom" />
                 <PortfolioCard title="Certidões" icon="/icons/pjsc-v1.png" description='I have worked at this one as manager and as engineer. It is a Certificate Emission and Conference System for my State Court.' docAndCodeCanBeShown={false} technology="Laravel (PHP) and MySQL" website="https://certidoes.tjsc.jus.br/" github="" playstore="" />
             </div>
         </section>

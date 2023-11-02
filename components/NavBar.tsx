@@ -26,7 +26,7 @@ export default function NavBar() {
                     <Link href="/#portfolio">Portfolio</Link>
                 </li>
                 <li className="ml-8">
-                    <Link href="/documents/CV.pdf">Resum&#233;</Link>
+                    <Link href="/documents/CV.pdf">R&#233;sum&#233;</Link>
                 </li>
                 <li className="ml-8">
                     <Link href="/#contact">Contact</Link>
