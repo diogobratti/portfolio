@@ -10,25 +10,25 @@ export default function NavBar() {
             </div>
 
             <ul className="hidden md:flex flex-row text-white ml-12 text-sm font-semibold list-none">
-                <li className="text-green-500">
+                <li className="text-green-400">
                     <Link href="/">Home</Link>
                 </li>
-                <li>
+                <li className="ml-8">
                     <Link href="/#whoami">Who Am I</Link>
                 </li>
-                <li>
+                <li className="ml-8">
                     <Link href="/#whatdoido">What Do I Do</Link>
                 </li>
-                <li>
+                <li className="ml-8">
                     <Link href="/#skill">Skills</Link>
                 </li>
-                <li>
+                <li className="ml-8">
                     <Link href="/#portfolio">Portfolio</Link>
                 </li>
-                <li>
-                    <Link href="/#resume">Resum&#233;</Link>
+                <li className="ml-8">
+                    <Link href="/documents/CV.pdf">Resum&#233;</Link>
                 </li>
-                <li>
+                <li className="ml-8">
                     <Link href="/#contact">Contact</Link>
                 </li>
             </ul>

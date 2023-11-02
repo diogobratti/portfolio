@@ -6,9 +6,9 @@ import Link from "next/link";
 
 export default function About() {
     return (
-        <section id="about" className="">
+        <section id="about" className="md:mx-20 md:mt-8">
             <div className="flex flex-col md:flex-row items-center">
-                <div className="flex flex-col grow">
+                <div className="flex flex-col grow md:w-1/2 md:max-w-md">
                     <AboutCard
                         title="Skills"
                         icon="/icons/code.svg"
@@ -34,7 +34,7 @@ export default function About() {
                         link="#contact"
                         projects={0} />
                 </div>
-                <div className="flex flex-col content-between flex-2 mt-12 md:mt-0">
+                <div className="flex flex-col content-between md:w-fill mt-12 md:pl-12 md:mt-0">
                     <WhoAmI />
 
                     <WhatDoIDo />

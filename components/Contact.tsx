@@ -80,10 +80,10 @@ export default function Contact() {
                     method="POST"
                 >
 
-                    <div className="flex flex-col md:flex-row items-center justify-center">
+                    <div className="flex flex-col items-center md:items-start justify-center">
                         <label
                             htmlFor="fullname"
-                            className="text-white after:content-['*'] after:ml-0.5 after:text-red-500"
+                            className="md:ml-8 text-white after:content-['*'] after:ml-0.5 after:text-red-500"
                         >
                             Full name
                         </label>
@@ -101,10 +101,10 @@ export default function Contact() {
                             <p className="text-neutral-500 md:ml-8">Fullname cannot be empty.</p>
                         )}
                     </div>
-                    <div className="flex flex-col md:flex-row items-center justify-center mt-2">
+                    <div className="flex flex-col items-center md:items-start justify-center mt-2">
                         <label
                             htmlFor="email"
-                            className="text-white after:content-['*'] after:ml-0.5 after:text-red-500"
+                            className="md:ml-8 text-white after:content-['*'] after:ml-0.5 after:text-red-500"
                         >
                             E-mail
                         </label>
@@ -122,11 +122,11 @@ export default function Contact() {
                             <p className="text-neutral-500 md:ml-8">Email cannot be empty.</p>
                         )}
                     </div>
-                    <div className="flex flex-col md:flex-row items-center justify-center mt-2">
+                    <div className="flex flex-col items-center md:items-start justify-center mt-2">
 
                         <label
                             htmlFor="subject"
-                            className="text-white after:content-['*'] after:ml-0.5 after:text-red-500"
+                            className="md:ml-8 text-white after:content-['*'] after:ml-0.5 after:text-red-500"
                         >
                             Subject
                         </label>
@@ -144,10 +144,10 @@ export default function Contact() {
                             <p className="text-neutral-500 md:ml-8">Subject cannot be empty.</p>
                         )}
                     </div>
-                    <div className="flex flex-col md:flex-row items-center justify-center mt-2">
+                    <div className="flex flex-col items-center md:items-start justify-center mt-2">
                         <label
                             htmlFor="message"
-                            className="text-white after:content-['*'] after:ml-0.5 after:text-red-500"
+                            className="md:ml-8 text-white after:content-['*'] after:ml-0.5 after:text-red-500"
                         >
                             Message
                         </label>
