@@ -51,14 +51,14 @@ export default function Contact() {
         }
 
         setButtonText("Sending");
-        setShowSuccessMessage(true);
+        // setShowSuccessMessage(true);
         setShowFailureMessage(false);
-        setButtonText("Send");
+        // setButtonText("Send");
         // Reset form fields
-        setFullname("");
-        setEmail("");
-        setMessage("");
-        setSubject("");
+        // setFullname("");
+        // setEmail("");
+        // setMessage("");
+        // setSubject("");
         // console.log(fullname, email, subject, message);
     };
     return (
